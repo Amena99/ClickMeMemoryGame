@@ -9,6 +9,10 @@ class GameContainer extends Component {
         image: ["./assets/images/kawaii.jpg", "./assets/images/cat.jpg", "./assets/images/cutedog.jpg", "./assets/images/deer.jpg", "./assets/images/dog.jpg", "./assets/images/fox.jpg", "./assets/images/goat.jpg", "./assets/images/koala.jpg", "./assets/images/panda.jpg", "./assets/images/pandaheart.jpg", "./assets/images/puppy.jpg", "./assets/images/sheep.jpg"]
 
     }
+    
+    copyState(newStateArray, item){
+        newStateArray.push(item);
+     }
 
     incrementScore = () => {
         let currentScore = this.state.score;
