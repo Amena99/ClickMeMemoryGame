@@ -2,6 +2,6 @@
     border-radius: 2px;
     position: relative;
     box-shadow: 0 3px 6px #999, 0 3px 6px #999;
-    border: 2px, black;
+    border: 2px, solid, black;
     overflow: hidden;
 }
