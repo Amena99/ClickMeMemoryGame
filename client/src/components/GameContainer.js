@@ -9,11 +9,24 @@ class GameContainer extends Component {
         image: ["./assets/images/kawaii.jpg", "./assets/images/cat.jpg", "./assets/images/cutedog.jpg", "./assets/images/deer.jpg", "./assets/images/dog.jpg", "./assets/images/fox.jpg", "./assets/images/goat.jpg", "./assets/images/koala.jpg", "./assets/images/panda.jpg", "./assets/images/pandaheart.jpg", "./assets/images/puppy.jpg", "./assets/images/sheep.jpg"]
 
     }
-    
+
     copyState(newStateArray, item){
         newStateArray.push(item);
      }
 
+     calculateTopScore(){
+        let newTopScore = 0;
+        let currentTopScore = this.state.topscore;
+        if (currentTopScore<=this.state.score){
+            newTopScore = this.state.score;
+            let refreshedCounterState = [0,0,0,0,0,0,0,0,0,0,0,0];
+            this.setState({
+                topscore: newTopScore,
+                score: 0,
+                counters: refreshedCounterState
+            })
+        }
+    }
     incrementScore = () => {
         let currentScore = this.state.score;
         console.log("In incrementScore--logging current state.score:")
@@ -24,18 +37,7 @@ class GameContainer extends Component {
             score: newScore
         });
     }
-    calculateTopScore = () => {
-        let newTopScore = 0;
-        let currentTopScore = this.state.topscore;
-        if (currentTopScore<this.state.score){
-            newTopScore = this.state.score;
-            this.setState({
-                topscore: newTopScore,
-                score: 0
-            })
-            this.resetAllImgStates();
-        }
-    }
+    
     
     resetAllImgStates = ()=> {
         this.ImageButtonElement.current.resetClickedState();
