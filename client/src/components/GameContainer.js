@@ -90,43 +90,35 @@ class GameContainer extends Component {
         return array;
     } 
 
-    
-    renderImage(){
-        return(
-            <ImageButton
-                incrementScore={this.incrementScore}
-                calculateTopScore = {this.calculateTopScore}
-                ref={this.ImageButtonElement}
-            />
-        )
+    createComponentArray() {
+        // const newPicsArray = this.state.counters = 
+        const pics = this.state.counters.map((value, index) => (
+             <ImageButton 
+                key={index}
+                handleClick={() => this.handleClick(index)}
+                counter={value}
+                image={this.state.image[index]}
+            />   
+        ))
+        console.log("logging pics array");
+        console.log(pics);
+        this.shuffleComponents(pics)
+        console.log("logging pics array");
+        console.log(pics);
+
+            return pics;
     }
 
-    render(){
+    render() {
         return(
-            <div>
-                <p>Score: {this.state.score}</p>
-                <p>Top Score: {this.state.topscore}</p>
-                <div className="grid-row">
-                {this.renderImage()}
-                {this.renderImage()}
-                {this.renderImage()}
-                {this.renderImage()}
-                </div>
-                <div className="grid-row">
-                {this.renderImage()}
-                {this.renderImage()}
-                {this.renderImage()}
-                {this.renderImage()}
-                </div>
-                <div className="grid-row">
-                {this.renderImage()}
-                {this.renderImage()}
-                {this.renderImage()}
-                {this.renderImage()}
-                </div>
+        <div>
+            <p>Score: {this.state.score}</p>
+            <p>Top Score: {this.state.topscore}</p>
+            <div className="row">
+                {this.createComponentArray()}
             </div>
-        )
-    }
+        </div>
+        );
 }
-
+};
 export default GameContainer;
