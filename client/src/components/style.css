@@ -1,7 +1,46 @@
+.container{
+    padding-top:100px;
+    display: flex;
+    align-content: center;
+}
+
+.row{
+    padding-top: 50px;
+    background: #ECEFF1;
+    height: 80%;
+    width: 90%;
+    /* wraps the items contained inside to change with window width */
+    display: flex;
+    flex-flow: row wrap;
+    padding: 20px;
+    justify-content: space-around;
+    align-content: center;
+    overflow: auto;
+}
+
 .card{
+    height: 210px;
+    width: 210px;
+    border: solid, 20px, gray;
     border-radius: 2px;
+    background: #fff;
+    box-shadow: 0 3px 10px #999, 0 3px 10px #999;
+    margin: 1rem;
     position: relative;
-    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
-    border: 2px, solid, black;
-    overflow: hidden;
+}
+.navbar{
+   
+    background: #20B2AA;
+    height: 100px;
+    color: white;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+  
+}
+.scoreDisplay, .topscoreDisplay {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: right;
 }

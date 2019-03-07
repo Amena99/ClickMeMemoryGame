@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import ImageButton from "./ImageButton";
+import NavBar from "./NavBar";
+import "./style.css";
 
 class GameContainer extends Component {
     state = {
@@ -112,12 +114,19 @@ class GameContainer extends Component {
     render() {
         return(
         <div>
-            <p>Score: {this.state.score}</p>
-            <p>Top Score: {this.state.topscore}</p>
-            <div className="row">
-                {this.createComponentArray()}
+            <NavBar
+            title={"Click on an image to play!"}
+            score={this.state.score}
+            topscore={this.state.topscore}
+            />
+            
+            <div className="container">
+                <div className="row">
+                    {this.createComponentArray()}
+                </div>
             </div>
         </div>
+            
         );
 }
 };
