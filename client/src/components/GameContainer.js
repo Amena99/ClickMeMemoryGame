@@ -35,9 +35,11 @@ class GameContainer extends Component {
             this.resetAllImgStates();
         }
     }
+    
     resetAllImgStates = ()=> {
         this.ImageButtonElement.current.resetClickedState();
     }
+
     renderImage(){
         return(
             <ImageButton
