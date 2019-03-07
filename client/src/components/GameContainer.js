@@ -70,22 +70,7 @@ class GameContainer extends Component {
             this.calculateTopScore();
         }
     }
-    
-    incrementScore = () => {
-        let currentScore = this.state.score;
-        console.log("In incrementScore--logging current state.score:")
-        console.log(currentScore);
-        let newScore = (currentScore+1);
-        console.log(newScore);
-        this.setState({
-            score: newScore
-        });
-    }
-    
-    
-    resetAllImgStates = ()=> {
-        this.ImageButtonElement.current.resetClickedState();
-    }
+
 
     renderImage(){
         return(
