@@ -2,15 +2,12 @@ import React, { Component } from "react";
 import ImageButton from "./ImageButton";
 
 class GameContainer extends Component {
-    constructor(props){
-        super(props);
-        this.ImageButtonElement = React.createRef();
-    }
-
     state = {
-        grid : Array(12).fill(null),
+        counters : [0,0,0,0,0,0,0,0,0,0,0,0],
         score: 0,
-        topscore: 0
+        topscore: 0,
+        image: ["./assets/images/kawaii.jpg", "./assets/images/cat.jpg", "./assets/images/cutedog.jpg", "./assets/images/deer.jpg", "./assets/images/dog.jpg", "./assets/images/fox.jpg", "./assets/images/goat.jpg", "./assets/images/koala.jpg", "./assets/images/panda.jpg", "./assets/images/pandaheart.jpg", "./assets/images/puppy.jpg", "./assets/images/sheep.jpg"]
+
     }
 
     incrementScore = () => {
