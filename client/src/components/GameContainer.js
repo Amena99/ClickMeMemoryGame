@@ -27,6 +27,50 @@ class GameContainer extends Component {
             })
         }
     }
+
+    handleClick(index){
+        let newCounterState = [];
+        this.state.counters.map((number) => (this.copyState(newCounterState, number))); //create new array setting each element equal to zero--can create another function that loops through and adds the current value to newCounterState 
+        console.log("Logging newCounterState in Game Container:");
+        console.log(newCounterState);
+
+        if(newCounterState[index]===0){
+    
+            newCounterState[index] = this.state.counters[index] + 1; //incremented the count of the given index in param
+            // console.log("Logging newCounterState[index] in Game Container:");
+            // console.log(newCounterState[index]);
+            // console.log("Logging index in Game Container:");
+            // console.log(index);
+            let currentScore = this.state.score;
+            let newScore = currentScore+1;
+            // console.log("This is the new score:");
+            // console.log(newScore);
+            this.shuffleComponents(this.createComponentArray());
+
+
+            // let imageStateCopy = this.state.image;
+            //     console.log("Image State Copy");
+            //     console.log(imageStateCopy);
+        
+            // let shuffledArray = this.shuffleImages(imageStateCopy);
+
+
+            this.setState(
+                {
+                    counters : newCounterState,
+                    score: newScore,
+                    // image: shuffledArray
+                })
+            
+                console.log("Logging image state");
+                console.log(this.state.image);
+           
+        }else{
+            console.log("Double click detected.")
+            this.calculateTopScore();
+        }
+    }
+    
     incrementScore = () => {
         let currentScore = this.state.score;
         console.log("In incrementScore--logging current state.score:")
