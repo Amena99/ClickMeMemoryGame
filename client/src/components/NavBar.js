@@ -3,7 +3,7 @@ import "./style.css";
 
 function NavBar(props) {
   return (
-      <nav class="navbar fixed-top">
+      <nav className="navbar fixed-top">
         <div className="container-fluid">
             
                 <div className="col-md-4"></div>

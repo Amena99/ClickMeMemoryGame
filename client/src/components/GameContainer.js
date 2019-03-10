@@ -8,26 +8,39 @@ class GameContainer extends Component {
         counters : [0,0,0,0,0,0,0,0,0,0,0,0],
         score: 0,
         topscore: 0,
+        topScoresArray:[],
         image: ["./assets/images/kawaii.jpg", "./assets/images/cat.jpg", "./assets/images/cutedog.jpg", "./assets/images/deer.jpg", "./assets/images/dog.jpg", "./assets/images/fox.jpg", "./assets/images/goat.jpg", "./assets/images/koala.jpg", "./assets/images/panda.jpg", "./assets/images/cattle.png", "./assets/images/puppy.jpg", "./assets/images/sheep.jpg"]
 
     }
 
     copyState(newStateArray, item){
         newStateArray.push(item);
-     }
+    }
 
-     calculateTopScore(){
+    calculateTopScore(){
         let newTopScore = 0;
         let currentTopScore = this.state.topscore;
-        if (currentTopScore<=this.state.score){
+
+        if (currentTopScore <= this.state.score){
             newTopScore = this.state.score;
-            let refreshedCounterState = [0,0,0,0,0,0,0,0,0,0,0,0];
+        
             this.setState({
-                topscore: newTopScore,
-                score: 0,
-                counters: refreshedCounterState
+                topscore: newTopScore
+
             })
-        }
+        } 
+
+        let refreshedCounterState = [0,0,0,0,0,0,0,0,0,0,0,0];
+        let tempScoresArray = [];
+        tempScoresArray = this.state.topScoresArray;
+        tempScoresArray.push(newTopScore);
+        console.log(tempScoresArray);
+
+        this.setState({
+            topScoresArray: tempScoresArray,
+            counters: refreshedCounterState,
+            score: 0
+        })
     }
 
     handleClick(index){
@@ -49,7 +62,6 @@ class GameContainer extends Component {
             // console.log(newScore);
             this.shuffleComponents(this.createComponentArray());
 
-
             // let imageStateCopy = this.state.image;
             //     console.log("Image State Copy");
             //     console.log(imageStateCopy);
@@ -60,12 +72,11 @@ class GameContainer extends Component {
             this.setState(
                 {
                     counters : newCounterState,
-                    score: newScore,
-                    // image: shuffledArray
+                    score: newScore
+                    
                 })
-            
-                console.log("Logging image state");
-                console.log(this.state.image);
+            console.log("Logging scoresArray");
+            console.log(this.state.scoresArray);
            
         }else{
             console.log("Double click detected.")
@@ -102,11 +113,11 @@ class GameContainer extends Component {
                 image={this.state.image[index]}
             />   
         ))
-        console.log("logging pics array");
-        console.log(pics);
+        // console.log("logging pics array");
+        // console.log(pics);
         this.shuffleComponents(pics)
-        console.log("logging pics array");
-        console.log(pics);
+        // console.log("logging pics array");
+        // console.log(pics);
 
             return pics;
     }
