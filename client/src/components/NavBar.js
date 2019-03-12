@@ -1,4 +1,5 @@
 import React from "react";
+import Score from "./Score";
 import "./style.css";
 
 function NavBar(props) {
@@ -14,7 +15,7 @@ function NavBar(props) {
                   <span className="subtitle" id="directions">{props.directions}</span>
                 </div>
                 <div className="col-md-3 scores" >
-                <p className="scoreDisplay">Score:  {props.score}</p>
+                <Score score={props.score}/>
                 <p className="topscoreDisplay">Top Score:  {props.topscore}</p>
                 </div>
 

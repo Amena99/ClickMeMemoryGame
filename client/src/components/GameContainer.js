@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ImageButton from "./ImageButton";
 import NavBar from "./NavBar";
+import Score from "./Score";
 import "./style.css";
 
 class GameContainer extends Component {
@@ -50,7 +51,18 @@ class GameContainer extends Component {
         console.log(newCounterState);
 
         if(newCounterState[index]===0){
-    
+            
+            function flashtext() {
+                let s = document.getElementById("scoreDisplay");
+                    s.className +=(" scoreDisplayFlashing"); 
+                    let colorBack = () => {
+                        s.classList.remove("scoreDisplayFlashing");
+                    }
+                    setTimeout(colorBack, 500);
+                }
+            setTimeout(flashtext, 100);
+            
+
             newCounterState[index] = this.state.counters[index] + 1; //incremented the count of the given index in param
             // console.log("Logging newCounterState[index] in Game Container:");
             // console.log(newCounterState[index]);
@@ -62,13 +74,6 @@ class GameContainer extends Component {
             // console.log(newScore);
             this.shuffleComponents(this.createComponentArray());
 
-            // let imageStateCopy = this.state.image;
-            //     console.log("Image State Copy");
-            //     console.log(imageStateCopy);
-        
-            // let shuffledArray = this.shuffleImages(imageStateCopy);
-
-
             this.setState(
                 {
                     counters : newCounterState,
@@ -79,7 +84,20 @@ class GameContainer extends Component {
             console.log(this.state.scoresArray);
            
         }else{
-            console.log("Double click detected.")
+            console.log("Double click detected.");
+
+            function flashtext() {
+                let s = document.getElementById("scoreDisplay");
+                s.classList.remove("scoreDisplayFlashing");
+                s.className +=(" scoreDisplayFlashingLose"); 
+                let colorBack = () => {
+                    s.classList.remove("scoreDisplayFlashingLose");
+                }
+                
+                setTimeout(colorBack, 500);
+                
+            }
+            setTimeout(flashtext, 100);
             this.calculateTopScore();
         }
     }
@@ -109,7 +127,7 @@ class GameContainer extends Component {
              <ImageButton 
                 key={index}
                 handleClick={() => this.handleClick(index)}
-                counter={value}
+                // counter={value}
                 image={this.state.image[index]}
             />   
         ))
@@ -124,10 +142,10 @@ class GameContainer extends Component {
 
     render() {
         return(
-        <div>
+        <div className="mainContainer">
             <NavBar
             iconimage="./assets/images/avengers.png"
-            title="THE AVENGERS CLICKS GAME"
+            title="THE AVENGERS CLICK GAME"
             directions={"Click on an Avenger to earn points. But don't click on any more than once!"}
             score={this.state.score}
             topscore={this.state.topscore}
