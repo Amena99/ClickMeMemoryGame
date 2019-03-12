@@ -83,3 +83,71 @@
       50% { opacity: .1; } 
       100% { opacity: 1; }
   }
+  @media only screen and (max-width: 950px) {
+      .navbar{
+   
+        background: #282828;
+        height: 300px;
+        color: white;
+        text-align: center;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: 400;
+        font-size: 15px;
+      
+    }
+    .scoreDisplay, .topscoreDisplay {
+        margin-top: 7px;
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+    }
+    .row {
+        background: #ECEFF1;
+        height: 80%;
+        width: 100%;
+        /* wraps the items contained inside to change with window width */
+        display: flex;
+        flex-flow: row wrap;
+        padding-top: 140px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 40px;
+        justify-content: space-around;
+        align-content: center;
+        overflow: auto;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .navbar{
+ 
+      background: #282828;
+      height: 350px;
+      color: white;
+      text-align: center;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-weight: 400;
+      font-size: 15px;
+    
+  }
+  .scoreDisplay, .topscoreDisplay {
+      margin-top: 7px;
+      font-size: 20px;
+      font-weight: 600;
+      text-align: center;
+  }
+  .row {
+      background: #ECEFF1;
+      height: 80%;
+      width: 100%;
+      /* wraps the items contained inside to change with window width */
+      display: flex;
+      flex-flow: row wrap;
+      padding-top: 160px;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-bottom: 40px;
+      justify-content: space-around;
+      align-content: center;
+      overflow: auto;
+  }
+}
