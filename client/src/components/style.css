@@ -7,7 +7,7 @@
     padding-top: 50px;
     background: #ECEFF1;
     height: 80%;
-    width: 90%;
+    width: 100%;
     /* wraps the items contained inside to change with window width */
     display: flex;
     flex-flow: row wrap;

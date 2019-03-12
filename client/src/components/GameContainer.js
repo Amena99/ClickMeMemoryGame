@@ -126,6 +126,7 @@ class GameContainer extends Component {
         return(
         <div>
             <NavBar
+            iconimage="./assets/images/avengers.png"
             title="THE AVENGERS CLICKS GAME"
             directions={"Click on an Avenger to earn points. But don't click on any more than once!"}
             score={this.state.score}
