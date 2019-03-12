@@ -19,8 +19,8 @@
 }
 
 .card{
-    height: 210px;
-    width: 210px;
+    height: 160px;
+    width: 180px;
     border: solid, 20px, gray;
     border-radius: 2px;
     background: #fff;
@@ -30,7 +30,7 @@
 }
 .navbar{
    
-    background: #20B2AA;
+    background: #282828;
     height: 100px;
     color: white;
     text-align: center;

@@ -9,7 +9,7 @@ class GameContainer extends Component {
         score: 0,
         topscore: 0,
         topScoresArray:[],
-        image: ["./assets/images/kawaii.jpg", "./assets/images/cat.jpg", "./assets/images/cutedog.jpg", "./assets/images/deer.jpg", "./assets/images/dog.jpg", "./assets/images/fox.jpg", "./assets/images/goat.jpg", "./assets/images/koala.jpg", "./assets/images/panda.jpg", "./assets/images/cattle.png", "./assets/images/puppy.jpg", "./assets/images/sheep.jpg"]
+        image: ["./assets/images/blackwidow.jpg", "./assets/images/captainamerica.jpg", "./assets/images/gamora.jpg", "./assets/images/gamora2.jpg", "./assets/images/hulk.jpg", "./assets/images/ironman.jpg", "./assets/images/SpiderMan.jpg", "./assets/images/spiderman2.jpg", "./assets/images/thor.jpg", "./assets/images/vision.jpg", "./assets/images/ironman2.jpg", "./assets/images/hulk2.jpg"]
 
     }
 
