@@ -126,7 +126,8 @@ class GameContainer extends Component {
         return(
         <div>
             <NavBar
-            title={"Click on an image to play!"}
+            title="THE AVENGERS CLICKS GAME"
+            directions={"Click on an Avenger to earn points. But don't click on any more than once!"}
             score={this.state.score}
             topscore={this.state.topscore}
             />

@@ -1,7 +1,6 @@
 .container{
-    padding-top:100px;
-    display: flex;
-    align-content: center;
+    padding-top:200px;
+    
 }
 
 .row{
@@ -23,24 +22,33 @@
     width: 180px;
     border: solid, 20px, gray;
     border-radius: 2px;
-    background: #fff;
+    background: #282828;
     box-shadow: 0 3px 10px #999, 0 3px 10px #999;
     margin: 1rem;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 .navbar{
    
     background: #282828;
-    height: 100px;
+    height: 150px;
     color: white;
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 15px;
   
 }
 .scoreDisplay, .topscoreDisplay {
     font-size: 20px;
     font-weight: 400;
     text-align: right;
+}
+
+#title{
+    font-size: 30px;
+    font-weight: 400;
 }
