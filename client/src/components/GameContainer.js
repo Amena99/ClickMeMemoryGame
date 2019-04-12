@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import ImageButton from "./ImageButton";
 import NavBar from "./NavBar";
-import Score from "./Score";
 import "./style.css";
 
 class GameContainer extends Component {

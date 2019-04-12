@@ -14,11 +14,11 @@ https://clickmememorygame.herokuapp.com/
 3. If you re-click an Avenger, your score will go down to zero, but if it was the highest score you received so far, it will be saved as a 'Top Score'. Try to get the highest Top Score possible: 12!
 
 ### Highlights: 
-*The Avengers Memory Game is built with React.js with a clean and attractive front-end design. 
+* The Avengers Memory Game is built with React.js with a clean and attractive front-end design. 
 
-*The game utilizes React features such as components, state, props, and lifecycles to effectively implement the game logic. 
+* The game utilizes React features such as components, state, props, and lifecycles to effectively implement the game logic. 
 
-*The shuffleComponents() method: 
+* The shuffleComponents() method: 
 ```
 shuffleComponents(array){
        
@@ -41,4 +41,4 @@ shuffleComponents(array){
 
 ```
 
-*This application is mobile responsive! 
+* This application is mobile responsive! 
