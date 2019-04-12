@@ -3,6 +3,7 @@ import ImageButton from "./ImageButton";
 import NavBar from "./NavBar";
 import "./style.css";
 
+
 //Game container contains all game components and logic for the game. 
 class GameContainer extends Component {
     
@@ -10,10 +11,10 @@ class GameContainer extends Component {
     //score, topscore, topscoreArray(to compare topscores to see which topscore is current topscore), 
     //and images that will be rendered in the ImageButton div. 
     state = {
-        counters : [0,0,0,0,0,0,0,0,0,0,0,0],
-        score: 0,
-        topscore: 0,
-        topScoresArray:[],
+    counters : [0,0,0,0,0,0,0,0,0,0,0,0],
+    score: 0,
+    topscore: 0,
+    topScoresArray:[],
         image: ["./assets/images/blackwidow.jpg", "./assets/images/captainamerica.jpg", "./assets/images/gamora.jpg", "./assets/images/gamora2.jpg", "./assets/images/hulk.jpg", "./assets/images/ironman.jpg", "./assets/images/SpiderMan.jpg", "./assets/images/spiderman2.jpg", "./assets/images/thor.jpg", "./assets/images/vision.jpg", "./assets/images/ironman2.jpg", "./assets/images/hulk2.jpg"]
 
     }
