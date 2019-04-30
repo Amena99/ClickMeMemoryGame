@@ -22,4 +22,6 @@ https://clickmememorygame.herokuapp.com/
 
 * The game utilizes React features such as components, state, props, and lifecycles to effectively implement the game logic. 
 
-* This application is mobile responsive! ![alt, text](https://i.imgur.com/AMrIeO2m.png)
+* This application is mobile responsive! 
+
+![alt, text](https://i.imgur.com/AMrIeO2m.png)
